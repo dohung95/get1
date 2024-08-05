@@ -1,0 +1,35 @@
+* {
+    font-family: Tahoma;
+}
+
+a {
+    text-decoration: none;
+    color: #25487c;
+}
+
+.thetrang {
+    border-top: 3px solid black;
+    background-color: #669aca;
+    border-bottom: 3px solid black;
+}
+
+.footer {
+    border-top: 2px solid black;
+    background-color: #669aca;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.thetrang a {
+    color: white;
+    margin-left: 90px;
+    font-size: 20pt;
+}
+.submit input{
+    width: 70px;
+    height: 20px;
+    border-radius: 3px;
+}
+input {
+    border: thin solid rgb(156, 197, 87);
+}

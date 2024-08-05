@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script>
+        function check(){
+            var username = document.getElementById("username").value;
+            var Susername = /^\w{6,12}$/;
+            if(!Susername.test(username)){
+                alert("The Username cannot be blank");
+                document.getElementById("username").focus();
+                return false;
+            }
+            var pw = document.getElementById("pw").value;
+            var Spw = /^\w{6,12}$/;
+            if(!Spw.test(pw)){
+                alert("The Password cannot be blank");
+                document.getElementById("pw").focus();
+                return false;
+            }
+            var cpw = document.getElementById("cpw").value;
+            var Scpw = /^\w+$/;
+            if(!Scpw.test(cpw)){
+                alert("The  Confirm password cannot be blank");
+                document.getElementById("cpw").focus();
+                return false;
+            }           
+            if(!(pw==cpw)){
+                alert("Confirm password does not match");
+                document.getElementById("cpw").focus();
+                return false;
+            }
+            var fname = document.getElementById("fname").value;
+            var Sfname = /^[A-Za-z ]+$/;
+            if(!Sfname.test(fname)){
+                alert("The First name cannot be blank");
+                document.getElementById("fname").focus();
+                return false;
+            }
+            var lname = document.getElementById("lname").value;
+            var Slname = /^[A-Za-z ]+$/;
+            if(!Slname.test(lname)){
+                alert("The Last name cannot be blank");
+                document.getElementById("lname").focus();
+                return false;
+            }
+            var email = document.getElementById("email").value;
+            var Semail = /^\w+[@]\w+[.]\w{3}([.]\w{2})?$/;
+            if(!Semail.test(email)){
+                alert("The Email cannot be blank");
+                document.getElementById("email").focus();
+                return false;
+            }
+            alert("Congratulation\nYour account has been created successfully!")
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="thetrang">
+            <a href="#">WELCOME</a>
+            <a href="#">OUR COURSES</a>
+            <a href="#">STUDY ONLINE</a>
+            <a href="#">BECOMING A STUDENT</a>
+            <a href="#">CONTACT US</a>
+        </div>
+        <div style="display: flex;">
+            <div style="padding: 30px 0px; width: 80%;">
+                <b style="font-size: 40pt; ">RGU: </b>
+                <b style="font-size: 40pt; color: #649bc9;">VIRTUAL CAMPUS</b>
+            </div>
+            <div style="padding: 5px 0px 15px 0px; width: 20%; ">
+                <img style="float: right;" src="roundel2.gif">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div style="display: flex; justify-content: space-around;">
+            <div style="width: 25%; ">
+                <div class="footer" style="text-align: left;">&nbsp;&nbsp;WELCOME</div>
+                <div style="height: 50px;margin: 25px 0px 5px 0px;">&nbsp;&nbsp;<a href="index.html">Welcome page</a>
+                </div>
+                <div class="footer" style="text-align: left;">&nbsp;&nbsp;NEWS</div>
+                <div style="height: 50px;margin: 25px 0px 5px 0px;">&nbsp;&nbsp;<a href="#">New items</a></div>
+            </div>
+            <div style="width: 50%; margin-left: 20px; ">
+                <div style="height:500px;">
+                    <h2>Create a new account</h2>
+                    <form action="index.html" onsubmit="return check();">
+                        <table>
+                            <tr>
+                                <td>
+                                    Username
+                                </td>
+                                <td>
+                                    <input type="text" id="username"><sup>*</sup>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Password
+                                </td>
+                                <td>
+                                    <input type="password" id="pw"><sup>*</sup>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Password confirm
+                                </td>
+                                <td>
+                                    <input type="password" id="cpw"><sup>*</sup>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Firt name
+                                </td>
+                                <td>
+                                    <input type="text" id="fname"><sup>*</sup>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Last Name
+                                </td>
+                                <td>
+                                    <input type="text" id="lname"><sup>*</sup>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email Address
+                                </td>
+                                <td>
+                                    <input type="text" id="email"><sup>*</sup>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Address
+                                </td>
+                                <td>
+                                    <textarea name="" id="address"
+                                        style="border: thin solid rgb(156, 197, 87); width: 215px; height: 70px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Country
+                                </td>
+                                <td>
+                                    <select name="country" id=""
+                                        style="border: thin solid rgb(156, 197, 87); width: 270px;">
+                                        <option value="Thailand">Thailand</option>
+                                        <option value="Malaysia">Malaysia</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Mobile
+                                </td>
+                                <td>
+                                    <input type="number" id="moblie">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Telephone
+                                </td>
+                                <td>
+                                    <input type="number" id="telephone">
+                                </td>
+                            </tr>
+                        </table>
+                        <p>
+                        <div class="submit">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div style="width: 28%; margin-left: 20px; ">
+                <div
+                    style="border-top: 2px solid black; border-bottom: 2px solid black; background-color: #cdcccc; height: 50%;">
+                    <div>
+                        <img src="bannertext_small2.gif" width="100%">
+                    </div>
+                    <div class="footer" style="text-align: left;">
+                        &nbsp;&nbsp;<b>Login</b>
+                    </div>
+                    <div style="margin-bottom: 50px;">
+                        &nbsp;&nbsp;Already a Virtual Campus member?<br>
+                        &nbsp;&nbsp;<a href="#">Longgin now</a>
+                    </div>
+                    <div class="footer" style="text-align: left;">
+                        &nbsp;&nbsp;<b>Join for FREE!</b>
+                    </div>
+                    <div style="margin-bottom: 50px;">
+                        &nbsp;&nbsp;Create an account <br>
+                        &nbsp;&nbsp;<a href="NewAccount.html">Get an account here</a>
+                    </div>
+                </div>
+                <br>
+                <div align="center"><img src="ver6.gif" width="30%"></div>
+            </div>
+
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer">
+            <b style="color: white;">The Robert Gordon University </b>
+            <b>Copyright &copy; RGU. All rights reserved. </b>
+            <b style="color: white;">Privacy Statement.</b>
+        </div>
+    </footer>
+</body>
+
+</html>
