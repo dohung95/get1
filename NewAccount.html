@@ -22,6 +22,12 @@
                 document.getElementById("pw").focus();
                 return false;
             }
+            if(username===pw)
+            {
+                alert("Password and login name must not be the same");
+                document.getElementById("pw").focus();
+                return false;
+            }
             var cpw = document.getElementById("cpw").value;
             var Scpw = /^\w+$/;
             if(!Scpw.test(cpw)){
